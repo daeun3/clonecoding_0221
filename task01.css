@@ -1,0 +1,281 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/* width: 1256px; */
+
+/* ================ header ================*/
+
+header {
+    /* border:1px solid black; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    height: 81px;
+    border-bottom: 1px solid #EAEDEF;
+    background-color: #FFFFFF;
+
+    position: sticky;
+    top: 0;
+}
+
+header .left_menu {
+    display: flex;
+}
+
+header #logo {
+    margin: 0 20px;
+}
+
+header .left_menu > * {
+    margin: 0 10px;
+}
+
+header .left_menu a {
+    text-decoration: none;
+    color:#2f3438;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header .left_menu :nth-child(2) {
+    color:#35C5F0;
+}
+
+header .left_menu a:hover {
+    color:#35C5F0;
+}
+
+header .right_menu {
+    display: flex;
+    align-items: center;
+}
+
+header .right_menu > * {
+    /* margin: 0 10px; */
+    padding: 0 10px;
+}
+
+header .right_menu a {
+    text-decoration: none;
+    color:#2f3438;
+    font-size: 14px;
+}
+
+header .right_menu .partition1,
+header .right_menu .partition2 {
+    border-left: 1px solid #EAEDEF;
+}
+
+
+header .right_menu button {
+    padding: 0 16px;
+    height: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color:#35C5F0;
+    border: none;
+    border-radius: 4px;
+}
+
+header .right_menu button:hover {
+    background-color: #009FCE;
+}
+
+
+/* ================ nav ================*/
+nav {
+    /* border: 1px solid black; */
+    border-bottom: 1px solid #EAEDEF;
+    background-color: #FFFFFF;
+    height: 51px;
+
+    /* 중앙 배치 */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+nav ul {
+    display: flex;
+    /* align-items: center; */
+}
+
+nav ul a {
+    display: block;
+    text-decoration: none;
+
+    color:#2f3438;
+    font-weight: bold;
+
+    padding:16px 6px;
+}
+
+nav ul a:hover {
+    color:#35C5F0;
+}
+
+nav ul :first-child {
+    color:#35C5F0;
+    border-bottom: 3px solid #35C5F0;
+}
+
+.popular_keyword {
+    display: flex;
+    width:200px;
+    border: 1px solid black;
+}
+.popular_keyword span {
+    display: block;
+}
+
+.popular_keyword .rank,
+.popular_keyword .trend {
+    text-align: center;
+    line-height: 20px;
+
+    width:20px;
+    height:20px;
+}
+
+.popular_keyword .rank {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.popular_keyword .trend {
+    font-size: 10px;
+    margin: 0px 5px;
+    color: rgb(240, 86, 86);
+}
+
+.popular_keyword .product {
+    height:20px;
+    line-height: 20px;
+}
+
+/* ================ main ================*/
+main {
+    height: 1000px;
+    background-color: azure;
+}
+
+/* section--banner */
+.banner {
+    height: 420px;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img,
+.banner-box {
+    /* border: 1px solid black; */
+    height: 100%;
+    margin:0px 10px;
+
+    border-radius: 5px;
+}
+
+.main-img {
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-img .publisher-box {
+    /* border: 1px solid black; */
+
+    position: absolute;
+    bottom:0px;
+
+    padding: 0px 30px 30px;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+}
+
+.main-img img {
+    height: 100%;
+}
+
+.main-img .title {
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+
+    left:10px;
+}
+
+.main-img .icon {
+    /* background-color: #FFFFFF; */
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.main-img .publisher p {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+
+/* banner-box */
+.banner-box {
+    width: 220px;
+    position:relative;
+
+    overflow: hidden;
+}
+
+.banner-img-box {
+    display: flex;
+    position: absolute;
+    left:0px;
+}
+
+.banner-img {
+    /* border: 1px solid black; */
+
+    width: 220px;
+    height: 420px;
+}
+
+.banner-img img {
+    height:100%;
+}
+
+/* .banner-img-box :nth-child(1) {
+    background-color: red;
+}
+
+.banner-img-box :nth-child(2) {
+    background-color: orange;
+}
+
+.banner-img-box :nth-child(3) {
+    background-color: yellow;
+}
+
+.banner-img-box :nth-child(4) {
+    background-color: green;
+}
+
+.banner-img-box :nth-child(5) {
+    background-color: blue;
+}
+
+.banner-img-box :nth-child(6) {
+    background-color: purple;
+} */
+
+/* ================ footer ================*/
