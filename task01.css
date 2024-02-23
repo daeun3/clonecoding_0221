@@ -2,33 +2,41 @@
     margin:0;
     padding:0;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .container {
-    border:3px solid red;
-    width: 1256px;
+    /* background-color: rgb(255, 164, 164); */
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contents-container {
+    width: 1136px;
+    /* border:3px solid blue; */
 }
 
 /* width: 1256px; */
+/* width: 1136px; */
 
 /* ================ header ================*/
 
 header {
-    /* border:1px solid black; */
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-
     height: 81px;
     border-bottom: 1px solid #EAEDEF;
     background-color: #FFFFFF;
 
     position: sticky;
     top: 0;
+
+    /* banner에 absolute 주는 바람에 우선순위가 높아져서 header가 가려지게 됨. z-index 줘야 */
+    z-index: 1;
+}
+
+header .contents-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
 
 header .left_menu {
@@ -101,7 +109,9 @@ nav {
     border-bottom: 1px solid #EAEDEF;
     background-color: #FFFFFF;
     height: 51px;
+}
 
+nav .contents-container {
     /* 중앙 배치 */
     display: flex;
     align-items: center;
@@ -110,7 +120,6 @@ nav {
 
 nav ul {
     display: flex;
-    /* align-items: center; */
 }
 
 nav ul a {
@@ -168,29 +177,28 @@ nav ul :first-child {
 
 /* ================ main ================*/
 main {
+    margin-top:30px;
     height: 1000px;
     background-color: azure;
 }
 
 /* ------ section--banner ------ */
 .banner {
-    height: 420px;
-    background-color: bisque;
+    height: 508px;
+}
+
+.banner .contents-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .main-img,
 .banner-box {
-    /* border: 1px solid black; */
     height: 100%;
-    margin:0px 10px;
-
     border-radius: 5px;
 }
 
 .main-img {
-    width: 700px;
     overflow: hidden;
     position: relative;
 }
@@ -241,23 +249,26 @@ main {
 
 /* ------ banner-box ------ */
 .banner-box {
-    width: 220px;
-    position:relative;
+    /* border: 1px solid black; */
 
+    width: 269px;
+    height:100%;
+
+    position:relative;
     overflow: hidden;
 }
 
 .banner-img-box {
+    height:100%;
+
     display: flex;
     position: absolute;
     left:0px;
 }
 
 .banner-img {
-    /* border: 1px solid black; */
-
-    width: 220px;
-    height: 420px;
+    height:100%;
+    width:269px;
 }
 
 .banner-img img {

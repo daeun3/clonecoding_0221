@@ -18,7 +18,7 @@ $mainImg.hover(()=>{
 let $bannerImgBox = $(".banner-img-box");
 let $bannerImgs = $(".banner-img");
 
-const IMG_WIDTH = 220;
+const IMG_WIDTH = 269;
 const IMG_LENGTH = $bannerImgs.length;
 let currentIdx = 0;
 

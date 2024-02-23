@@ -1,0 +1,42 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.div--container {
+    width:1000px;
+    height: 100px;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: red;
+}
+
+header .div--container {
+    background-color: pink;
+}
+
+
+/* 컨테이너를 가운데 정렬하고 싶은 거니까 태그에 flex를 줘야 함. */
+nav {
+    background-color: orange;
+}
+
+nav .div--container {
+    background-color: rgb(250, 198, 101);
+}
+
+section {
+    background-color: yellow;
+}
+
+section .div--container {
+    background-color: rgb(252, 252, 159);
+    border:1px solid black;
+}
