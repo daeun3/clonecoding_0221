@@ -262,7 +262,7 @@ main {
     height:100%;
 
     position:relative;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .banner-img-box {
@@ -305,6 +305,70 @@ main {
 .banner-img-box :nth-child(6) {
     background-color: purple;
 } */
+
+.arrow-box {
+    width:48px;
+    height:48px;
+    border-radius: 50%;
+
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(63, 71, 77, 0.15);
+
+    cursor: pointer;
+}
+
+.arrow {
+    width:14px;
+    height:14px;
+
+    position: absolute;
+    right: 50%;
+    top: 50%;
+
+    border-top : 3px solid #2F3438;
+    border-left : 3px solid #2F3438;
+}
+
+.left {
+    transform: translate(75%, -50%) rotate(-45deg);
+}
+
+.right {
+    transform: translate(25%, -50%) rotate(135deg);
+}
+
+.side-banner {
+    position: relative;
+}
+
+.arrow-box-left {
+    top:50%;
+    left:0;
+    transform: translate(-50%, -50%);
+} 
+
+.arrow-box-right {
+    top:50%;
+    right:0;
+    transform: translate(50%, -50%);
+} 
+
+.arrow-box-left:hover {
+    background-color: #F7F9FA;
+}
+
+.arrow-box-right:hover {
+    background-color: #F7F9FA;
+}
+
+.side-banner .arrow-box {
+    display: none;
+}
+
+.side-banner:hover > .arrow-box {
+    display: block;
+}
 
 /* ------ middle-nav ------ */
 .middle-nav {
@@ -353,7 +417,7 @@ main {
 }
 
 .interior-pictures .contents-container {
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 .section-header {
@@ -392,46 +456,59 @@ main {
     line-height: 20px;
     font-weight: 700;
 
+    /* 버튼 배경색 투명하게 */
     background-color: transparent;
     border: 0px;
     cursor: pointer;
 }
 
 .interior-box {
+    height: 200px;
     overflow: hidden;
 }
 
 .interior-box ul {
-    height: 200px;
     display: flex;
+    height:100%;
+}
+
+.interior-box li {
+    background-color: red;
+    margin-right: 20px;
+
+    /* 보이는 div box에 6개의 이미지를 딱 맞게 채우기 위함 */
+    width: calc(16.6667% - 16.6667px);
+    flex-shrink: 0;
+
+
+    border-radius: 4px;
+    list-style-type: none;
+
+    overflow: hidden;
 }
 
 .interior-img {
-    /* border: 3px solid red; */
-    flex-shrink: 0;
-
-    margin-right: 20px;
-    border-radius: 4px;
-
     height: 100%;
-    /* width: 150px; */
+    width:100%;
 
-    /* 100/6 = 16.6667 */
-    /* width: calc(16.6667% - 16.6667px); */
-    width: calc(1136px / 6px);
-
-    overflow: hidden;
     display: flex;
     justify-content: center;
 }
-
-
 
 .interior-img img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* 비율 유지하면서 컨테이너를 꽉 채운다(너비, 높이 줘야 적용됨). */
 }
+
+.interior-contents {
+    position: relative;
+}
+
+.interior-contents .arrow-box-left {
+    display: none;
+} 
+
 
 
 /* ================ footer ================*/
