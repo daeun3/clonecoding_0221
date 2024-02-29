@@ -462,9 +462,20 @@ main {
     cursor: pointer;
 }
 
-.interior-box {
+.interior-contents {
     height: 200px;
+    width:100%;
+
     overflow: hidden;
+    position: relative;
+}
+
+.interior-box {
+    height: 100%;
+    width:100%;
+    
+    position: absolute;
+    left:0px;
 }
 
 .interior-box ul {
@@ -501,14 +512,75 @@ main {
     object-fit: cover; /* 비율 유지하면서 컨테이너를 꽉 채운다(너비, 높이 줘야 적용됨). */
 }
 
-.interior-contents {
+/* 사진 밑 작성자와 북마크 */
+.interior-box .writer {
+    position: absolute;
+    bottom:0;
+    left:0;
+
+    padding:8px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.interior-box .profile {
+    border-radius: 50%;
+
+    width:24px;
+    height:24px;
+
+    margin-right:4px;
+
+    overflow: hidden;
+
+    display: flex;
+}
+
+.interior-box .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interior-box .writer p {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.interior-box li {
     position: relative;
 }
 
-.interior-contents .arrow-box-left {
+.interior-box .bookmark {
+    position: absolute;
+    bottom:0;
+    right:0;
+
+    padding:0 8px 4px 0;
+}
+
+
+.interior-box button {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.interior-box .bookmark-on {
+    display: none;
+}
+
+
+/* 화살표 버튼 */
+.interior-picture-container {
+    position: relative;
+}
+
+.interior-picture-container .arrow-box-left {
     display: none;
 } 
-
 
 
 /* ================ footer ================*/
