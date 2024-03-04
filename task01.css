@@ -484,7 +484,7 @@ main {
 }
 
 .interior-box li {
-    background-color: red;
+    background-color: white;
     margin-right: 20px;
 
     /* 보이는 div box에 6개의 이미지를 딱 맞게 채우기 위함 */
@@ -582,6 +582,51 @@ main {
     display: none;
 } 
 
+.seemore a {
+    text-decoration: none;
+}
+
+.seemore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seemore-container {
+
+}
+
+.seemore-arrow-case {
+    width:40px;
+    height:40px;
+
+    min-width : 40px;
+    min-height : 40px;
+    
+    background-color: rgb(234, 237, 239);
+    border-radius: 50%;
+
+    margin-bottom: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seemore a:hover .seemore-arrow-case{
+    background-color: rgb(218, 221, 224);
+}
+
+.seemore-arrow {
+    font-size: 20px;
+    color: rgb(47, 52, 56);
+}
+
+.seemore-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #2F3438;
+}
 
 /* ================ footer ================*/
 footer {

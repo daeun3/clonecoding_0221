@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 만들기2</title>
+    <!-- 화살표는 화면 크기에 따라 계속 달라져서 별로 안 예쁨.
+    그냥 특수 문자 쓰는게 속편함
+    HTML 특수문자 : http://ieo.kr/?mode=utils&exec=specialchar -->
+    <style>
+        .seemore-arrow {
+            width:40px;
+            height:40px;
+
+            min-width : 40px;
+            min-height : 40px;
+            
+            background-color: rgb(234, 237, 239);
+            border-radius: 50%;
+
+            transform: rotate(90deg);
+        }
+
+        .seemore-arrow:hover {
+            background-color: rgb(218, 221, 224);
+        }
+        .arrow-case {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-head {
+            width:10px;
+            height:10px;
+            border-top: 2px solid rgb(47, 52, 56);
+            border-left: 2px solid rgb(47, 52, 56);
+            
+            transform: translateY(100%) rotate(45deg);
+        }
+        .arrow-body {
+            height:18px;
+            width:0;
+            border:1px solid rgb(47, 52, 56);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">
+            <div class="seemore-arrow">
+                <span class="arrow-case">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </span>
+            </div>
+        </a>
+    </div>
+
+    <div style="font-size: 30px;">&rarr;</div>
+</body>
+</html>
