@@ -94,7 +94,6 @@ header .right_menu .partition2 {
     border-left: 1px solid #EAEDEF;
 }
 
-
 header .right_menu button {
     padding: 0 16px;
     height: 40px;
@@ -103,6 +102,8 @@ header .right_menu button {
     background-color:#35C5F0;
     border: none;
     border-radius: 4px;
+
+    cursor: pointer;
 }
 
 header .right_menu button:hover {
@@ -420,7 +421,7 @@ main {
     /* border:1px solid black; */
 }
 
-.section-header {
+.interior-pictures .section-header {
     height:50px;
     display: flex;
     justify-content: space-between;
@@ -429,23 +430,24 @@ main {
     padding: 20px 0px;
 }
 
-.section-header .title {
+.interior-pictures .section-header .title {
     display: flex;
     flex-direction: column;
-    
 }
 
-.section-header .title div {
+.interior-pictures .section-header .title div {
     flex: 1 1 0%;
 }
 
-.section-header .title strong {
+.interior-pictures .section-header .title strong {
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+
+    cursor: pointer;
 }
 
-.section-header .title span {
+.interior-pictures .section-header .title span {
     display: block;
     margin-top: 4px;
 }
@@ -460,6 +462,11 @@ main {
     background-color: transparent;
     border: 0px;
     cursor: pointer;
+}
+
+.section-header .title strong:hover,
+.see-more button:hover {
+    opacity: 0.5;
 }
 
 .interior-contents {
@@ -592,10 +599,6 @@ main {
     align-items: center;
 }
 
-.seemore-container {
-
-}
-
 .seemore-arrow-case {
     width:40px;
     height:40px;
@@ -627,6 +630,117 @@ main {
     line-height: 20px;
     color: #2F3438;
 }
+
+/* 오늘의 기획전 */
+.special_exhibition .section-header {
+    height:28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0px;
+}
+
+.special_exhibition .title strong {
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.special_exhibition-box a {
+    text-decoration: none;
+}
+
+
+.special_exhibition-container {
+    width: 100%;
+    height:300px;
+
+}
+
+.special_exhibition-contents {
+    width: 100%;
+    height:100%;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/* 얘가 움직임 */
+.special_exhibition-box {
+    width:100%;
+    height:100%;
+
+    position: absolute;
+    left:0px;
+}
+
+.special_exhibition-box ul {
+    display: flex;
+}
+
+
+.special_exhibition-box li {
+    background-color: white;
+    /* border:1px solid black; */
+    width:269px;
+
+    margin-right: 20px;
+
+    /* 보이는 div box에 4개의 이미지를 딱 맞게 채우기 위함 */
+    width: calc(25% - 15px);
+    flex-shrink: 0;
+
+    list-style-type: none;
+}
+
+.special_exhibition-img {
+    width:100%;
+    height:180px;
+
+    border-radius: 4px;
+
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+
+.special_exhibition-box .desc {
+    width:100%;
+    height:46px;
+    margin-top:10px;
+
+    color: rgb(47, 52, 56);
+}
+
+.special_exhibition-box .desc > :first-child {
+    
+    font-size: 14px;
+    line-height: 20px;
+
+    /* 말줄임표(...) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.special_exhibition-box .desc > :last-child {
+    margin-top: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.special_exhibition-container {
+    position: relative;
+}
+
+.special_exhibition-container .arrow-box-left {
+    display: none;
+}
+
 
 /* ================ footer ================*/
 footer {

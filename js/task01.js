@@ -34,13 +34,27 @@ mainBanner.autoSlide();     //작동 시작
 // =========================== interior-pictures ===========================
 
 const interiorBanner = new Banner(
-    $(".interior-contents"),
+    // $(".interior-contents"),
     $(".interior-box"),
     $(".interior-box li"),
     $(".interior-pictures .arrow-box-left"),
-    $(".interior-pictures .arrow-box-right")
+    $(".interior-pictures .arrow-box-right"),
+    6                                               //몇 개를 숨길지 알려줘야 함.
 );
 
 // console.log(interiorBanner);
 // console.log(interiorBanner.IMG_WIDTH);
 
+// =========================== special_exhibition ===========================
+
+const exhibitionBanner = new Banner(
+    // $(".special_exhibition-contents"),
+    $(".special_exhibition-box"),
+    $(".special_exhibition-box li"),
+    $(".special_exhibition .arrow-box-left"),
+    $(".special_exhibition .arrow-box-right"),
+    1
+);
+
+// console.log(exhibitionBanner);
+// console.log(exhibitionBanner.IMG_WIDTH);

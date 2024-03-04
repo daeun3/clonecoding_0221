@@ -1,13 +1,14 @@
 export default class Banner {
-    constructor($box, $imgBox, $imgs, $arrowLeft, $arrowRight) {
-        // this.$box = $box;
+    constructor($imgBox, $imgs, $arrowLeft, $arrowRight, n) {
         this.$imgBox = $imgBox;
         this.$imgs = $imgs;
         this.$arrowLeft = $arrowLeft;
         this.$arrowRight = $arrowRight;
 
         // 배너박스 + margin 
-        this.IMG_WIDTH = $box.width() + Number($imgs.css("margin-right").slice(0,-2));
+        // this.IMG_WIDTH = $box.width() + Number($imgs.css("margin-right").slice(0,-2));
+        this.IMG_WIDTH = ($imgs.width() + Number($imgs.css("margin-right").slice(0,-2))) * n;
+
 
         $arrowLeft.on("click", () => {
             this.prevImg();
