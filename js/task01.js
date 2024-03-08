@@ -15,6 +15,46 @@ $mainImg.hover(()=>{
     $mainImg.css("transition", "0.2s ease");
 });
 
+// 인테리어 이미지
+let $interiorImgs = $(".interior-img img");
+$interiorImgs.each((index, item)=>{
+    $(item).hover(()=>{
+        $(item).css("transform", "scale(1.05)");
+        $(item).css("transition", "0.2s ease");
+                
+    }, ()=>{
+        $(item).css("transform", "scale(1)");
+        $(item).css("transition", "0.2s ease");
+    });
+});
+
+// 오늘의 기획전 이미지
+let $exhibitionImgs = $(".special_exhibition-img img");
+$exhibitionImgs.each((index, item)=>{
+    $(item).hover(()=>{
+        $(item).css("transform", "scale(1.05)");
+        $(item).css("transition", "0.2s ease");
+                
+    }, ()=>{
+        $(item).css("transform", "scale(1)");
+        $(item).css("transition", "0.2s ease");
+    });
+});
+
+
+// 베스트-이미지
+let $productionImgs = $(".production-item img");
+$productionImgs.each((index, item)=>{
+    $(item).hover(()=>{
+        $(item).css("transform", "scale(1.1)");
+        $(item).css("transition", "0.2s ease");
+                
+    }, ()=>{
+        $(item).css("transform", "scale(1)");
+        $(item).css("transition", "0.2s ease");
+    });
+});
+
 // =========================== banner ===========================
 const mainBanner = new MainBanner(
     $(".side-banner"),
@@ -58,3 +98,51 @@ const exhibitionBanner = new Banner(
 
 // console.log(exhibitionBanner);
 // console.log(exhibitionBanner.IMG_WIDTH);
+
+
+
+class Banner_t {
+    constructor($imgBox, $imgs, $arrowLeft, $arrowRight, n) {
+        this.$imgBox = $imgBox;
+        this.$imgs = $imgs;
+        this.$arrowLeft = $arrowLeft;
+        this.$arrowRight = $arrowRight;
+  
+        // 배너박스 + margin 
+        // this.IMG_WIDTH = $box.width() + Number($imgs.css("margin-right").slice(0,-2));
+        // this.IMG_WIDTH = ($imgs.width() + Number($imgs.css("margin-right").slice(0,-2))) * n;
+        this.IMG_WIDTH = $imgBox.width() - 1136;
+  
+        $arrowLeft.on("click", () => {
+            this.prevImg();
+        });
+  
+        $arrowRight.on("click", () => {
+            this.nextImg();
+        });
+    }
+  
+    nextImg() {
+        this.$arrowRight.css("display", "none");
+        this.$arrowLeft.css("display", "block");
+  
+        this.$imgBox.css("left", -this.IMG_WIDTH);
+        this.$imgBox.css("transition", "0.5s ease");
+    }
+  
+    prevImg() {
+        this.$arrowRight.css("display", "block");
+        this.$arrowLeft.css("display", "none");
+  
+        this.$imgBox.css("left", 0);
+        this.$imgBox.css("transition", "0.5s ease");
+    }
+  }
+
+  const bestBanner = new Banner_t(
+    $(".best_nav-box"),
+    $(".best_nav-box li"),
+    $(".section-nav .arrow-box-left"),
+    $(".section-nav .arrow-box-right"),
+    6
+);
